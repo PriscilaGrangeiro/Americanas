@@ -1,0 +1,185 @@
+Funcionalidade Login
+Como um usuário das lojas Americanas
+Quero completar o login
+Para ter acesso as funcionalidades de usuário logado
+
+CT001 - Login Valido 
+Como um usuário das lojas Americanas
+E ele acessa a página de login 
+E ele preenche as credenciais validas 
+Quando clica no botão "continuar"
+Então devo ser direcionado para a página inicial do usuário logado 
+
+CT002 - Login invalido
+Como um usuário das lojas Americanas
+E ele acessa a página de login 
+E ele preenche as credenciais incorretas
+Quando clica no botão "continuar"
+Então uma mensagem de aviso de senha incorreta deve ser exibida
+
+Funcionalidade relacionados ao produto
+Como um usuário das lojas Americanas
+Quero favoritar item, compartilhar item, mais informações do produto, política de troca e Avaliações/Perguntas
+Para poder realizar minha compra
+
+CT003 - Favoritar item
+Dado que estou visualizando o produto na tela
+Quando o clico em favoritar
+Então o item escolhido fica guardado na aba de favoritos
+
+CT004 - Compartilhar item
+Dado que estou visualizando o produto na tela
+Quando o clico em compartilhar
+E escolho o aplicativo e a pessoa com quem compartilhar
+Então o item escolhido é compartilhado
+
+CT005 - Mais informações do produto
+Dado que estou visualizando o produto na tela
+Quando o clico em mais informações do produto
+Então é mostrado uma lista com mais especiações sobre o produto
+
+CT006- Política de troca
+Dado que estou visualizando o produto na tela
+Quando o clico em política de troca
+Então é mostrado uma lista com as políticas de troca:
+                 Cancelamento
+                 Troca ou devolução
+                 Reembolso
+
+CT007- Avaliações/Perguntas
+Dado que estou visualizando o produto na tela
+Quando o clico em avaliações/perguntas
+Então é mostrado uma lista com as Avaliações/Perguntas sobre o produto
+
+Funcionalidade Cesta de compras
+Como um usuário das lojas Americanas
+Quero adicionar o produto no carrinho
+Para poder finalizar a compra
+
+CT008 - Adicionar na cesta de compras
+Dado que o usuário escolheu seu produto no site Americanas
+Quando clica no botão "Comprar"
+E clica no botão "Ir para a cesta"
+Então seu produto está na cesta de compras 
+
+CT009 - Adicionar mais de um item carrinho
+Dado que o usuário escolheu seu produto no site Americanas
+Quando clica no botão "Comprar"
+E clica no botão "Ir para a cesta"
+E clicou no link "adicionar mais produtos" na tela minha cesta
+E escolheu mais um produto no site americanas
+Então seu produto está na cesta de compras 
+
+Funcionalidade cálculo do frete e prazo
+Como um usuário das lojas Americanas
+Quero adicionar o meu CEP
+Para poder calcular o prazo e o valor de frete do produto
+
+CT010 - Cálculo do frete 
+Dado que o produto já está na cesta de compras
+Quando o usuário insere o CEP para calcular frete e prazo
+E clica no botão "OK"
+Então o valor e o prazo são exibidos na tela
+
+CT011 - Cálculo do frete (Não sabe o CEP)
+Dado que o produto já está na cesta de compras
+Quando o usuário para calcular o frete clica no link "não sei meu cep"
+E direcionado para a página de busca dos correios
+E digita seu endereço no campo de busca 
+E clica no botão "Buscar"
+Então o cep da sua residência é apresentado na tela
+
+Funcionalidade formas de pagamento
+Como um usuário das lojas Americanas
+Quero escolher a forma de pagamento do produto
+Para poder finalizar a compra
+
+CT012 - Formas de pagamento AME cartão de crédito
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pague com AME
+E possui cadastro no app AME 
+E clica em pagar dentro do app, escolha a opção cartão de crédito
+E cadastra o cartão de crédito
+E clica no botão "Pagar" escaneado o QR conde
+Então sua compra é finalizada com sucesso
+
+CT013 - Formas de pagamento AME cartão de crédito
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pague com carne digital AME
+E possui cadastro no app AME 
+E clica no botão "Pagar" escaneado o QR conde
+E clica em pagar dentro do app, escolha a opção” carnê digital”.
+Então seu carne é gerado e sua compra é finalizado com sucesso
+
+CT014 - Formas de pagamento 1 cartão de crédito
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pague com cartão de crédito
+E é preenchido os dados do cartão de crédito
+E clica no botão "Fechar pedido" 
+Então sua compra é finalizada com sucesso
+
+CT015 - Formas de pagamento 2 cartões de crédito
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pague com cartão de crédito
+E é preenchido os dados do cartão de crédito
+E é clicado no botão "Adicionar segundo cartão"
+E clica no botão "Fechar pedido" 
+Então sua compra é finalizada com sucesso
+
+CT016 - Formas de pagamento na loja a vista
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pague na loja
+E clicado no botão "Fechar pedido"
+Então será gerado um boleto que deverá ser pago em qualquer caixa das lojas americanas
+
+CT017 - Formas de pagamento na PIX
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pix
+E abro o app do banco, opção pagar com qr code e escaneie o código
+Então ao confirmar as informações a compra é finalizado com sucesso
+
+CT018 - Formas de pagamento AME cartão de crédito Negado
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pague com AME
+E possui cadastro no app AME 
+E clica em pagar dentro do app, escolha a opção cartão de crédito
+E cadastra o cartão de crédito
+E clica no botão "Pagar" escaneado o QR conde
+E a forma de pagamento foi negado
+Então sugerido mudar a forma de pagamento ou tentar novamente
+
+CT019 - Formas de pagamento AME cartão de credito Negado
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pague com carne digital AME
+E possui cadastro no app AME 
+E clica no botão "Pagar" escaneado o QR conde
+E clica em pagar dentro do app, escolha a opção” carnê digital”.
+E a forma de pagamento foi negado
+Então sugerido mudar a forma de pagamento ou tentar novamente
+
+CT020 - Formas de pagamento 1 cartão de crédito Negado
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pague com cartão de crédito
+E é preenchido os dados do cartão de crédito
+E clica no botão "Fechar pedido" 
+E a forma de pagamento foi negado
+Então sugerido mudar a forma de pagamento ou tentar novamente
+
+CT021- Formas de pagamento 2 cartões de crédito Negado
+Dado que o produto já está na cesta de compras
+Quando o usuário clica no botão continuar
+E é escolhido a opção pague com cartão de crédito
+E é preenchido os dados do cartão de crédito
+E é clicado no botão "Adicionar segundo cartão"
+E clica no botão "Fechar pedido" 
+E a forma de pagamento foi negado
+Então sugerido mudar a forma de pagamento ou tentar novamente
